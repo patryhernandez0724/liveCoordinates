@@ -11,6 +11,10 @@
 		4DEA04492C7F655200C3BCA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEA04482C7F655200C3BCA9 /* ContentView.swift */; };
 		4DEA044B2C7F655300C3BCA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DEA044A2C7F655300C3BCA9 /* Assets.xcassets */; };
 		4DEA044E2C7F655300C3BCA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DEA044D2C7F655300C3BCA9 /* Preview Assets.xcassets */; };
+		4DEA04562C7F65DD00C3BCA9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEA04552C7F65DD00C3BCA9 /* CoreLocation.framework */; };
+		4DEA04582C7F65E700C3BCA9 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEA04572C7F65E700C3BCA9 /* ARKit.framework */; };
+		4DEA045B2C7F680A00C3BCA9 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEA045A2C7F680A00C3BCA9 /* LocationManager.swift */; };
+		4DEA045D2C7F690B00C3BCA9 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEA045C2C7F690B00C3BCA9 /* ARViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		4DEA04482C7F655200C3BCA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DEA044A2C7F655300C3BCA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DEA044D2C7F655300C3BCA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4DEA04552C7F65DD00C3BCA9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4DEA04572C7F65E700C3BCA9 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		4DEA04592C7F667B00C3BCA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4DEA045A2C7F680A00C3BCA9 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		4DEA045C2C7F690B00C3BCA9 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DEA04582C7F65E700C3BCA9 /* ARKit.framework in Frameworks */,
+				4DEA04562C7F65DD00C3BCA9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +48,7 @@
 			children = (
 				4DEA04452C7F655200C3BCA9 /* ARLocationDemo */,
 				4DEA04442C7F655200C3BCA9 /* Products */,
+				4DEA04542C7F65DC00C3BCA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +63,13 @@
 		4DEA04452C7F655200C3BCA9 /* ARLocationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4DEA04592C7F667B00C3BCA9 /* Info.plist */,
 				4DEA04462C7F655200C3BCA9 /* AppDelegate.swift */,
 				4DEA04482C7F655200C3BCA9 /* ContentView.swift */,
 				4DEA044A2C7F655300C3BCA9 /* Assets.xcassets */,
 				4DEA044C2C7F655300C3BCA9 /* Preview Content */,
+				4DEA045A2C7F680A00C3BCA9 /* LocationManager.swift */,
+				4DEA045C2C7F690B00C3BCA9 /* ARViewContainer.swift */,
 			);
 			path = ARLocationDemo;
 			sourceTree = "<group>";
@@ -65,6 +80,15 @@
 				4DEA044D2C7F655300C3BCA9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DEA04542C7F65DC00C3BCA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DEA04572C7F65E700C3BCA9 /* ARKit.framework */,
+				4DEA04552C7F65DD00C3BCA9 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEA04492C7F655200C3BCA9 /* ContentView.swift in Sources */,
+				4DEA045D2C7F690B00C3BCA9 /* ARViewContainer.swift in Sources */,
 				4DEA04472C7F655200C3BCA9 /* AppDelegate.swift in Sources */,
+				4DEA045B2C7F680A00C3BCA9 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +301,12 @@
 				DEVELOPMENT_TEAM = 5UGJ88D5TH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARLocationDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to place AR objects.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -287,7 +318,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.patricia.ARLocationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.patricia.App-TestingLiDAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -306,7 +337,12 @@
 				DEVELOPMENT_TEAM = 5UGJ88D5TH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ARLocationDemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to place AR objects.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -318,7 +354,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.patricia.ARLocationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.patricia.App-TestingLiDAR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
